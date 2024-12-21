@@ -1,0 +1,3 @@
+C:/Users/23766/Desktop/token_parser/cmake-build-debug-visual-studio/CMakeFiles/Monkey.dir
+C:/Users/23766/Desktop/token_parser/cmake-build-debug-visual-studio/CMakeFiles/edit_cache.dir
+C:/Users/23766/Desktop/token_parser/cmake-build-debug-visual-studio/CMakeFiles/rebuild_cache.dir

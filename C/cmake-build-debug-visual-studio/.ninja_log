@@ -1,0 +1,6 @@
+# ninja log v5
+6	35	7496738953772741	CMakeFiles/Monkey.dir/main.c.obj	79d1cd865c670342
+3	116	7496738954587560	CMakeFiles/Monkey.dir/lexer.c.obj	d206af6c36784f63
+1	189	7497250674370032	Monkey.exe	b7a745116f44373e
+24	70	7496738954122430	CMakeFiles/Monkey.dir/token.c.obj	362d637932248f9f
+0	96	7496738954393242	CMakeFiles/Monkey.dir/repl.c.obj	1e505c1d556ffde2
