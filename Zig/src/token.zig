@@ -23,6 +23,7 @@ pub const TokenType = enum {
     RBRACKET,
     LBRACE,
     RBRACE,
+    COLON,
     INT,
     FUNCTION,
     LET,
@@ -34,6 +35,7 @@ pub const TokenType = enum {
     EQ,
     NOT_EQ,
 };
+
 
 // Custom Format Implementation for TokenType
 pub fn format(self: TokenType) []const u8 {
@@ -68,6 +70,7 @@ pub fn format(self: TokenType) []const u8 {
         TokenType.RETURN => "RETURN",
         TokenType.EQ => "EQ",
         TokenType.NOT_EQ => "NOT_EQ",
+        TokenType.COLON => "COLON",
     };
 }
 

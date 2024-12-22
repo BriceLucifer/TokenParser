@@ -135,13 +135,18 @@ pub const Lexer = struct {
             ']' => {
                 tok = token.Token.init(token.TokenType.RBRACKET, "]");
             },
+            ':' => {
+                tok = token.Token.init(token.TokenType.COLON, ":");
+            },
             0 => {
-                tok = token.Token.init(token.TokenType.EOF, "]");
+                tok = token.Token.init(token.TokenType.EOF, "0");
             },
             else  => {
                 if (is_letter(self.ch)) {
                     const literal = self.read_identifier();
-                    return token.Token.init(token.TokenType.IDENT, literal);
+                    // lookup keywords
+                    const token_type = token.Look_up(literal);
+                    return token.Token.init(token_type, literal);
                 } else if (is_digit(self.ch)) {
                     const literal = self.read_number();
                     return token.Token.init(token.TokenType.INT, literal);
@@ -162,5 +167,5 @@ pub const Lexer = struct {
     fn is_digit(ch: u8) bool {
         return ch >= '0' and ch <= '9';
     }
-
+  
 };

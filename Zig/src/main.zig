@@ -19,7 +19,7 @@ pub fn lex_input(input: []const u8) !void {
 }
 
 pub fn main() !void {
-    const hello: []const u8 = "let add = fn (a,b) { return a + b ;} - / [] {} (); == != !!";
+    const hello: []const u8 = "let add:fn = fn (a,b) { return a + b ;} - / [] {} (); == != !! // #";
     try lex_input(hello);
 }
 
