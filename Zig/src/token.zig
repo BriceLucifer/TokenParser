@@ -95,6 +95,7 @@ pub fn initMap(allocator: *std.mem.Allocator) !void {
     _ = try map.?.put("return", TokenType.RETURN);
 }
 
+const Allocator = std.mem.Allocator;
 
 // Token 结构体定义
 pub const Token = struct {

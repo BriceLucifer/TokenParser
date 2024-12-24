@@ -2,6 +2,7 @@
 const std = @import("std");
 const token = @import("token.zig");
 
+
 // Lexer 结构体
 pub const Lexer = struct {
     input: []const u8,         // 输入源码
@@ -79,7 +80,7 @@ pub const Lexer = struct {
                     tok.Literal = "==";
                 } else {
                     tok.Type = token.TokenType.ASSIGN;
-                    tok.Literal = "=";
+                    tok.Literal = self.ch;
                 }
             },
             '!' => {
@@ -94,7 +95,7 @@ pub const Lexer = struct {
                 }
             },
             '/' => {
-                tok = token.Token.init(token.TokenType.SLASH, "/");
+                tok = token.Token.init(token.TokenType.SLASH, []u8{self.ch});
             },
             '*' => {
                 tok = token.Token.init(token.TokenType.ASTERISK, "*");
